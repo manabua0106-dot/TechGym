@@ -64,13 +64,20 @@ techgym-articles/
 │   │   ├── prep-logic-checker.md
 │   │   ├── researcher.md
 │   │   └── writer.md
-│   └── rules/                   ルール（毎回自動読み込み）
-│       ├── agent-info.md
-│       ├── cta-templates.md
-│       ├── internal-links.md
-│       ├── iron-rule.md
-│       ├── prohibited-words.md
-│       └── service-info.md
+│   ├── rules/                   ルール（毎回自動読み込み）
+│   │   ├── agent-info.md
+│   │   ├── cta-templates.md
+│   │   ├── internal-links.md
+│   │   ├── iron-rule.md
+│   │   ├── prohibited-words.md
+│   │   └── service-info.md
+│   └── memory/                  フィードバック蓄積（学びの記録）
+│       ├── MEMORY.md
+│       ├── feedback_writing.md
+│       ├── feedback_structure.md
+│       ├── feedback_client.md
+│       ├── feedback_techgym.md
+│       └── feedback_legal.md
 ├── articles/                    記事出力先
 ├── references/                  必要時のみ手動参照
 │   ├── README.md
@@ -103,3 +110,9 @@ techgym-articles/
 - ルールを追加したい場合は rules/ に別ファイルとして追加する。
 - 詳細なチェック基準は agents/ に記載する。
 - CLAUDE.mdには「絶対遵守事項」と「パイプラインの流れ」だけを書く。
+
+## memoryの運用ルール
+- Manabuさんからフィードバックを受けたら、該当するmemoryファイルに日付付きで追記する。
+- **「許容」「これでいい」「もう指摘しないで」と言われた判断は必ずmemoryに記録する。**
+- 同じフィードバックを二度させない。一度言われたことは学習する。
+- memoryに「今の作業の進捗」は入れない。入れるのは「次回以降も使える普遍的な学び」だけ。
