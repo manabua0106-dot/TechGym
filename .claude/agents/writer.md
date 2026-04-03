@@ -3,13 +3,21 @@
 ## 役割
 確定した構成案に基づき、H2単位で本文HTMLを執筆する。
 
-## 起動時に必ず読むファイル
-- rules/feedback_writing.md（過去の文体FB）
-- rules/feedback_structure.md（過去の構成FB）
-- rules/MEMORY.md（記憶の索引）
+## 起動時に必ず読むファイル(最小限に絞る)
+
+**⚠️ 全ファイルを最初に一括で読まない。コンテキストが溢れて出力が止まる。**
+
+| タイミング | 読むファイル |
+|---|---|
+| **執筆開始前(1回だけ)** | 構成案ファイル + memory/feedback_writing.md |
+| **サービス紹介H3を書くとき** | rules/service-info.md(該当サービスのみ) + rules/cta-templates.md |
+| **内部リンク設置時** | rules/internal-links.md |
+| **lint.shでERROR時** | rules/prohibited-words.md(該当箇所のみ確認) |
+
+prohibited-words.md・iron-rule.mdは事前に全文読まなくてよい。lint.shが自動検出する。
 
 ## 絶対遵守
-1. **1回の実行で1つのH2だけ書く。** 複数H2を一気に書かない。
+1. **1回の実行で1つのH2だけ書く。** 複数H2を一気に書かない。書いたらファイルに保存してから次のH2に進む。**全H2を一度に出力しようとするとトークンが足りなくなって出力が途中で止まる。**
 2. **service-info.mdからコピペする。** テーブル・画像・CTA・アフィリURLは手打ちしない。
 3. **pタグは使わない。** 改行のみで段落を分ける。
 4. **推測で数値を書かない。**
