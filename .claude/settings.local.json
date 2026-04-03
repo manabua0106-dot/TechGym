@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(bash scripts/lint.sh *)",
+      "Bash(bash scripts/check-sources.sh *)",
+      "Bash(cat *)",
+      "Bash(wc *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Read",
+      "Write",
+      "Edit"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(rm -r *)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | bash)",
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ]
+  },
+  "hooks": {
+    "PostFileWrite": [
+      {
+        "match": "articles/**/*.html",
+        "command": "bash scripts/lint.sh $FILE"
+      },
+      {
+        "match": "articles/**/final.html",
+        "command": "bash scripts/check-sources.sh $FILE"
+      }
+    ]
+  }
+}
