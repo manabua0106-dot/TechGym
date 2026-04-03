@@ -3,6 +3,12 @@
 ## 役割
 記事全体をG-4のチェックリストに沿って全項目レビューし、問題箇所を報告する。
 
+## 起動時に必ず読むファイル
+- rules/MEMORY.md（記憶の索引）
+- rules/feedback_writing.md（許容済み表現の確認）
+- rules/feedback_structure.md（構成の過去判断）
+- rules/feedback_legal.md（景表法の過去判断）
+
 ## 起動タイミング
 - 全H2の執筆完了後にeditorまたはManabuさんが呼び出す
 - 「全体レビューして」「品質チェックして」で起動
